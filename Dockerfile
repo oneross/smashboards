@@ -1,4 +1,5 @@
-# oneross/smashross:v3
+# oneross/smashross:v4
+# change: config.ru to allow iframe (attempt)
 # https://hub.docker.com/_/ruby
 FROM ruby:3.1.3
 
