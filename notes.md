@@ -18,3 +18,6 @@ Interesting error and learning ruby...  bundle only support mac, add linux...
 
 - switched base image from ruby:3.1.3-slim to ruby:3.1.3.  I guess the former is missing headers etc for libssl.
 - build, but new issue - thin requires javascript runtime...
+    - this: https://stackoverflow.com/questions/52274485/docker-not-able-to-run-nodejs-npm
+    - and this: https://github.com/nodesource/distributions (for latest version)
+

@@ -6,8 +6,14 @@ EXPOSE 3030
 
 # Install production dependencies.
 WORKDIR /usr/src/app
-RUN apt-get install nodejs
 COPY ./smash-ross/Gemfile ./smash-ross/Gemfile.lock ./
+
+# nodejs - complicated
+RUN apt-get update; \
+    apt-get install -y curl gnupg; \
+    curl -sL https://deb.nodesource.com/setup_19.x | bash -; \
+    apt-get install -y nodejs; \
+    rm -rf /var/lib/apt/lists/*
 
 # Copy local code to the container image.
 COPY ./smash-ross ./
